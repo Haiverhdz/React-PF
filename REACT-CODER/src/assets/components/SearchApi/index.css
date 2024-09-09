@@ -1,0 +1,10 @@
+.item-container{
+    display: grid;
+    grid-template-columns: 33% 33% auto;
+    transition: trasform 0.5;
+    cursor: pointer;
+}
+
+item-container:hover{
+    transform: scale(1.1);
+}

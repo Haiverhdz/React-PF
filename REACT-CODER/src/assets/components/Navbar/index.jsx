@@ -1,24 +1,26 @@
- import Logo from '../../../assets/images/logo.png';
- import React from 'react';
- import CartWidget from '../CartWidget';
+import Logo from "../../../assets/images/logo.png";
+import React from "react";
+import CartWidget from "../CartWidget";
+import Title from "../Title";
+import NavbarList from "../NavbarList";
+import "./styles.css";
 
 function Navbar() {
-  return (<>
-  <header>
-    <nav className='navbar container'>
-        <div className='navbar-logo'>
-            <img src={Logo} alt="" /><span id='title'>Haiver's Shop</span>
-        </div>
-        <ul className='navbar-menu'>
-            <li className='nav-li'><a href='' className='navbar-link'>Tienda</a></li>
-            <li className='nav-li'><a href='' className='navbar-link'>Hombres</a></li>
-            <li className='nav-li'><a href='' className='navbar-link'>Mujeres</a></li>
-            <li className='nav-li'><a href='' className='navbar-link'><CartWidget/></a></li>
-        </ul>
-    </nav>
-  </header>  
+  return (
+    <>
+      <header>
+        <nav className="navbar container">
+          <div className="navbar-logo">
+            <img src={Logo} alt="" />
+            <Title heading="h2" text="Haiver's Shop" />
+          </div>
+          <NavbarList label="Home" href="/Home" />
+          <NavbarList label="Store" href="/Store" />
+          <NavbarList label="Description" href="/Description" />
+          <NavbarList label={CartWidget()} />
+        </nav>
+      </header>
     </>
-
   );
 }
 
