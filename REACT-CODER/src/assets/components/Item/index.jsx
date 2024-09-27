@@ -7,7 +7,7 @@ const Item = ({title, price, id, category, img, link, type}) => {
     
     return(
         <>
-            <article onClick={()=>navigate(`/Detail/${id}`)} className={`card card--${type}`}>
+            <article onClick={()=>navigate(`/detail/${id}`)} className={`card card--${type}`}>
                 <Title heading="h4" className='card-title' text={title} />
                 <img className="img" src={img} alt="" />
                 <p className="card-price">Precio: {price}</p>

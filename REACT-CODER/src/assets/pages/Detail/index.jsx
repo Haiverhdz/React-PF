@@ -18,6 +18,7 @@ const Detail = () => {
   }, [id]);
 
   if (loading) return <p>Cargando...</p>;
+  
 
   return (
     <>

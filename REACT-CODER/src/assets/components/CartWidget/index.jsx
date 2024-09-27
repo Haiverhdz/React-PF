@@ -1,15 +1,21 @@
-import { Icon } from '@iconify/react'
+import { useContext } from "react";
+import { GlobalContext } from "../../../context/GlobalContext";
+import { Icon } from "@iconify/react";
+import { useNavigate } from "react-router-dom";
 
+const CartWidget = () => {
+  const { cart } = useContext(GlobalContext);
+  console.log("carrito: ", cart);
+  
 
-const CartWidget= ()=>{
-    return (
-        <>
-        <div className='cart-widget'>
-        <span className='pill'>0</span>
-       <Icon className='cart-icon' icon="uil:cart" />"
-       </div>
-        </>
-    )
+  return (
+    <>
+      <div  className="cart-widget">
+        <span className="pill">{cart?.length}</span>
+        <Icon className="cart-icon" icon="uil:cart" />"
+      </div>
+    </>
+  );
 };
 
-export default CartWidget
+export default CartWidget;

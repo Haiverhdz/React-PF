@@ -4,23 +4,28 @@ import BaseLayout from './assets/layout'
 import Home from './assets/pages/Home'
 import Store from './assets/pages/Store'
 import Detail from './assets/pages/Detail'
-
+import { GlobalContextProvider } from './context/GlobalContext'
+import NotFound from './assets/components/NotFound'
+import Cart from './assets/pages/Cart'
 
 
 function App() {
 
   return (
     <>
-    <BrowserRouter>
-      <BaseLayout>
-          <Routes>
-            <Route exact path='/Home' element={<Home/>}/>
-            <Route exact path='/Store' element={<Store/>}/>
-            <Route exact path='/Detail/:id' element={<Detail/>}/>
-          </Routes>
-      </BaseLayout>
-    </BrowserRouter>
-      
+      <GlobalContextProvider>
+        <BrowserRouter>
+          <BaseLayout>
+            <Routes>
+              <Route exact path='/home' element={<Home/>}/>
+              <Route exact path='/store' element={<Store/>}/>
+              <Route exact path='/detail/:id' element={<Detail/>}/>
+              <Route exact path='*' element={<NotFound/>}/>
+              <Route exact path='/cart' element={<Cart/>}/>
+            </Routes>
+          </BaseLayout>
+        </BrowserRouter>
+      </GlobalContextProvider>
     </>
   )
 };

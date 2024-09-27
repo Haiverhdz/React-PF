@@ -1,4 +1,4 @@
-.navbar-item{
+.navbar-item-header{
     list-style: none;
     margin: 0;
     padding: 0;
@@ -6,6 +6,27 @@
     gap:20px;
     align-items: center;
     font-size: 22px;
+}
+
+.navbar-item-footer{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display:flex;
+    gap:5px;
+    align-items: center;
+    font-size: 16px;
+}
+
+.navbar-item-footer-1{
+    list-style: none;
+    margin: 0;
+    display:flex;
+    gap:5px;
+    align-items: flex-start;
+    font-size: 20px;
+    text-decoration: underline;
+    text-decoration-color: blue;
 }
 
 .navbar--link{
@@ -17,17 +38,14 @@
     display:flex;
     gap:20px;
     align-items: center;
-}
-
-.navbar--link{
     padding: 3px;
     cursor: pointer;
     color: white;
 }
 
-
 .navbar--link:hover{
     color: rgb(60, 0, 255);
     transition: all .4s linear;
 }
+
 

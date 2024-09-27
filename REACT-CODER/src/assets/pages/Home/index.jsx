@@ -1,5 +1,11 @@
+import HomeContainer from "../../components/HomeContaner";
+
 const Home = () => {
-  return <></>;
+  return (
+  <>
+  <HomeContainer/>
+  </>
+  );
 };
 
 export default Home;

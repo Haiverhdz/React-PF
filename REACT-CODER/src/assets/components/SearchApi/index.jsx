@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Item from "../Item";
 import Title from "../Title";
+import "./index.css";
 
 const SearchApi = () => {
   const [items, setItems] = useState([]);
@@ -16,8 +17,11 @@ const SearchApi = () => {
   return (
     <>
       <Title heading="h1" text="¡Busca a tu manera!" />
-      <label>Busca en la web: </label>
-      <input type="text" onChange={(e) => setsearchParam(e.target.value)} />
+      <div className="container-label">
+        <label>Busca en la web: </label>
+        <input type="text" onChange={(e) => setsearchParam(e.target.value)} />
+      </div>
+
       <main className="item-container">
         {items.map((item, i) => (
           <Item
@@ -35,30 +39,5 @@ const SearchApi = () => {
     </>
   );
 };
-
-// const SearchApi = ()=> {
-//     const [items, setItems] = useState([]);
-//     const [searchParam, setsearchParam] = useState(['cascos shaft']);
-
-//     useEffect(()=>{
-//         fetch(`https://api.mercadolibre.com/sites/MCO/search?q=${searchParam}`)
-//         .then(res=> res.json.parse())
-//         .then(data=> setItems(data.results.slice(0,30)));
-//     }, [setsearchParam]) ;
-
-//     return(
-//         <>
-//             <Title heading="h1" text="¡Busca a tu manera!"/>
-//             <label>Busca en la web: </label>
-//             <input type="text" onChange={(e)=> setsearchParam(e.target.value)}/>
-//             <main className="item-container">
-//             {items.map(item => <Item title={item.title} price={item.price} img={item.thumbnail} link={item.permalink} condition={item.condition} type='primary' />)}
-//             </main>
-
-//         </>
-//     )
-
-//     ;
-// };
 
 export default SearchApi;

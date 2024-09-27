@@ -1,4 +1,4 @@
-import Logo from "../../../assets/images/logo.png";
+import Logo from "../../../assets/images/logo.svg";
 import React from "react";
 import CartWidget from "../CartWidget";
 import Title from "../Title";
@@ -11,13 +11,13 @@ function Navbar() {
       <header>
         <nav className="navbar container">
           <div className="navbar-logo">
-            <img src={Logo} alt="" />
+            <img className="logo" src={Logo} alt="" />
             <Title heading="h2" text="Haiver's Shop" />
           </div>
-          <NavbarList label="Home" href="/Home" />
-          <NavbarList label="Store" href="/Store" />
-          <NavbarList label="Description" href="/Description" />
-          <NavbarList label={CartWidget()} />
+          <NavbarList className="header" label="Home" href="/home" />
+          <NavbarList className="header" label="Store" href="/store" />
+          <NavbarList className="header" label="Description" href="/description" />
+          <NavbarList className="header" label={CartWidget()}  href="/cart" />
         </nav>
       </header>
     </>

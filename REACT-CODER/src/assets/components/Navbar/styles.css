@@ -9,6 +9,7 @@
     display: flex;
     justify-content: space-between;
     max-width: 1200px;
+    padding: 45px;
 }
 
 .navbar-logo{
@@ -17,7 +18,7 @@
 }
 
 .navbar-logo img {
-    height: 20px;
+    height: 110px;
     margin-right: 10px;
 }
 
@@ -25,3 +26,7 @@
     gap:4px;
 }
 
+.logo{
+    height: 120px;
+    width: 120px;
+}
