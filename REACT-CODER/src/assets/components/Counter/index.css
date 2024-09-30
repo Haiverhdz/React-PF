@@ -1,10 +1,10 @@
-.button-counter{
-    background-color: #4CAF50;       
-    color: white;                    
+.button-counter{      
+    color: black;   
+    max-width: 27px;                 
     font-size: 15px;                 
-    padding: 8px 15px;              
+    padding: 10px;              
     border: none;                    
-    border-radius: 8px;              
+    border-radius: 4px;              
     cursor: pointer;                 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
     transition: background-color 0.3s ease, transform 0.2s ease; 
@@ -19,23 +19,26 @@
 
 .counter-styles{
     display: inline-flex;
-    gap: 5px;
+    
     margin-top: 10px;
-    padding: 10px;
+    max-width: 90px;
 }
 
 .style-p{
     display:flex ;
     align-items: center;
+    background-color: aliceblue;
+    border-radius: 4px 4px 4px 4px;
+    width: 25px;
+    justify-content: center;
 }
 
 .button-add{
-    background-color: rgb(211, 85, 91);
-    border: 2px 2px 2px 2px;
     padding: 7px;
-    border-radius: 2px 2px 2px 2px;
-    margin-top: 10px;
     border: none;                    
     border-radius: 8px; 
     cursor: pointer;
+    height: 27px;
+    border-radius: 4px 4px 4px 4px;
+    background-color: #5f6be9;
 }

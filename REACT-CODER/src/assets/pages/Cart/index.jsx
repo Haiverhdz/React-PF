@@ -1,12 +1,12 @@
-import { useEffect } from "react";
-import { useState } from "react";
-import { useContext } from "react";
+import { useEffect, useState, useContext } from "react";
 import { GlobalContext } from "../../../context/GlobalContext";
+import { useNavigate } from "react-router-dom";
 import "./index.css";
 
 const Cart = () => {
   const { cart } = useContext(GlobalContext);
   const [cartValue, setCartValue] = useState(cart);
+  const navigate = useNavigate();
 
   const getProductQuantity = (cart, id) => {
     return cart.filter((item) => item.id === id).length;
@@ -17,6 +17,10 @@ const Cart = () => {
   );
 
   const uniqueProducts = [...new Set(cart.map((item) => item.id))];
+
+  const pay = () => {
+    navigate("/pay");
+  };
 
   useEffect(() => {
     setCartValue(cart);
@@ -51,7 +55,7 @@ const Cart = () => {
               <h3>Total: ${total}</h3>
             </div>
             <div className="container">
-              <button className="pay-button">Pay</button>
+              <button onClick={pay} className="pay-button">Pay</button>
             </div>
           </div>
         )}

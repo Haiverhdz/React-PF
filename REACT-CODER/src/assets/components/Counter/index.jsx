@@ -46,7 +46,7 @@ const Counter = ({ title, price, id, category, img }) => {
       </div>
       <div>
         <button onClick={addItemToCart} className="button-add">
-          Agregar al carrito
+          Add to cart
         </button>
       </div>
     </>
