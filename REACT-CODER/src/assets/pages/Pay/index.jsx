@@ -31,12 +31,36 @@ const PaymentForm = () => {
         name={state.name}
         focused={state.focus}
       />
-      <form>
+      <form className='container-form'>
         <input
           type="number"
           name="number"
           placeholder="Card Number"
           value={state.number}
+          onChange={handleInputChange}
+          onFocus={handleInputFocus}
+        />
+          <input
+          type="month"
+          name="date"
+          placeholder="expiry date"
+          value={state.expiry}
+          onChange={handleInputChange}
+          onFocus={handleInputFocus}
+        />
+          <input
+          type="number"
+          name="cvc"
+          placeholder="CVC"
+          value={state.cvc}
+          onChange={handleInputChange}
+          onFocus={handleInputFocus}
+        />
+         <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          value={state.name}
           onChange={handleInputChange}
           onFocus={handleInputFocus}
         />

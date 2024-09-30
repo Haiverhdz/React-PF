@@ -29,6 +29,9 @@
     display: flex;
     align-items: center;
     justify-content:center;
-    background-color: aquamarine;
+    background-color: rgb(127, 172, 255);
     border-radius: 5px;
+    border: solid white;
+    padding: 4px;
+    
 }
