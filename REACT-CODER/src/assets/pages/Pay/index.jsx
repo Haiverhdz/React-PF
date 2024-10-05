@@ -1,29 +1,31 @@
-import React, { useState } from 'react';
-import Cards from 'react-credit-cards-2';
-import 'react-credit-cards-2/dist/es/styles-compiled.css';
-import "./index.css"
+import React, { useState } from "react";
+import Cards from "react-credit-cards-2";
+import "react-credit-cards-2/dist/es/styles-compiled.css";
+import "./index.css";
 
 const PaymentForm = () => {
   const [state, setState] = useState({
-    number: '',
-    expiry: '',
-    cvc: '',
-    name: '',
-    focus: '',
+    number: "",
+    expiry: "",
+    cvc: "",
+    name: "",
+    focus: "",
   });
 
   const handleInputChange = (evt) => {
     const { name, value } = evt.target;
-    
+
     setState((prev) => ({ ...prev, [name]: value }));
-  }
+  };
 
   const handleInputFocus = (evt) => {
     setState((prev) => ({ ...prev, focus: evt.target.name }));
-  }
+  };
 
   return (
-    <div className='container-card'>
+    <>
+    <h3 className="title-h3">Add your payment method</h3>
+    <div className="container-card">
       <Cards
         number={state.number}
         expiry={state.expiry}
@@ -31,7 +33,7 @@ const PaymentForm = () => {
         name={state.name}
         focused={state.focus}
       />
-      <form className='container-form'>
+      <form className="container-form">
         <input
           type="number"
           name="number"
@@ -40,15 +42,15 @@ const PaymentForm = () => {
           onChange={handleInputChange}
           onFocus={handleInputFocus}
         />
-          <input
+        <input
           type="month"
           name="date"
-          placeholder="expiry date"
+          placeholder="Expiry Date"
           value={state.expiry}
           onChange={handleInputChange}
           onFocus={handleInputFocus}
         />
-          <input
+        <input
           type="number"
           name="cvc"
           placeholder="CVC"
@@ -56,7 +58,7 @@ const PaymentForm = () => {
           onChange={handleInputChange}
           onFocus={handleInputFocus}
         />
-         <input
+        <input
           type="text"
           name="name"
           placeholder="Name"
@@ -64,10 +66,13 @@ const PaymentForm = () => {
           onChange={handleInputChange}
           onFocus={handleInputFocus}
         />
-        ...
       </form>
+      <div className="btn-pay">
+          <button className="btn-payment">Pay</button>
+        </div>
     </div>
+  </>
   );
-}
+};
 
 export default PaymentForm;

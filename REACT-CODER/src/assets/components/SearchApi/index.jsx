@@ -18,8 +18,8 @@ const SearchApi = () => {
     <>
       <Title heading="h1" text="¡Busca a tu manera!" />
       <div className="container-label">
-        <label>Busca en la web: </label>
-        <input type="text" onChange={(e) => setsearchParam(e.target.value)} />
+        <label className="label-store">Busca en la web: </label>
+        <input className="input-store" type="text" onChange={(e) => setsearchParam(e.target.value)} />
       </div>
 
       <main className="item-container">
